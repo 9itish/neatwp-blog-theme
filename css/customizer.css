@@ -1,0 +1,11 @@
+.wp-customizer .customize-control-heading h2 {
+  font-size: 1rem;
+  margin: 1rem 0 0 0;
+  color: #333;
+}
+.wp-customizer .customize-control-text p {
+  margin: 0;
+}
+.wp-customizer li.customize-control-checkbox {
+  margin-bottom: 0;
+}/*# sourceMappingURL=customizer.css.map */

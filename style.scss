@@ -1,0 +1,302 @@
+/*
+Theme Name: NeatWP Blog
+Theme URI: https://hellonitish.com/ 
+Author: Nitish
+Author URI: https://hellonitish.com/ 
+Description: A minimal and performant theme for blogs.
+Version: 1.0.0                       
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: neatwp-blog-theme        
+Tags: blog, minimal, clean, responsive
+*/
+
+:root {
+    --n-brand-primary-color: #0C3671;
+    --n-brand-secondary-color: #E68100;
+}
+
+html {
+    font-family: "Ubuntu";
+}
+
+.nav-wrapper.n-bshadow {
+    background: white;
+}
+
+.wp-block-image img {
+    background: white;
+}
+
+body {
+    background: linear-gradient(color-mix(in srgb, white 95%, var(--n-brand-primary-color)), color-mix(in srgb, white 95%, var(--n-brand-secondary-color)));
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins";
+}
+
+.nav-brand {
+    font-family: "Poppins";
+}
+
+a {
+    color: var(--n-brand-primary-color);
+}
+
+a:hover {
+    color: var(--n-brand-secondary-color);
+}
+
+.author-name {
+    font-size: 95%;
+}
+
+.author-name,
+.mod-time {
+    span {
+        font-weight: bold;
+        color: color-mix(in srgb, white 30%, currentColor);
+    }
+}
+
+.edit-link {
+    text-align: end;
+}
+
+.comments-section {
+    border-top: 1px dashed var(--n-border-color);
+}
+
+.post-categories,
+.post-tags {
+
+    p {
+        font-size: 100%;
+    }
+}
+
+.sidebar-wrapper aside h3 {
+    font-size: calc(11*var(--n-base-font-size)/8);
+}
+
+aside.widget-search form label {
+    font-size: calc(12*var(--n-base-font-size)/8);
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.search-form {
+    justify-content: space-between;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.article-item-wrapper {
+
+    article {
+        background: white;
+        height: 100%;
+        justify-content: space-between;
+
+        &.n-h-zoom, &.n-h-bshadow {
+            transition: 0.2s all;
+        }
+    
+        &.n-h-zoom:hover {
+            transform: scale(1.01);
+        }
+    
+        &.n-h-bshadow:hover {
+            box-shadow: 0 0 6px #ccc,0 0 18px #ddd;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .post-meta {
+
+        color: var(--n-archive-post-card-meta-color, #000);
+
+        margin-top: calc(2 * var(--n-base-margin));
+        padding-top: calc(2 * var(--n-base-padding));
+
+        border-top: 1px solid color-mix(in srgb, 80% white, currentColor);
+
+        .author-name {
+            margin: 0;
+        }
+
+        .mod-time {
+            text-align: end;
+            white-space: nowrap;
+        }
+    }
+}
+
+.website-footer {
+    width: 100%;
+    color: white;
+    margin-top: calc(10 * var(--n-base-margin));
+
+    .footer-widgets-section {
+        background: var(--n-footer-column-section-color, #000D);
+    }
+
+    .footer-tagline-section {
+        background: var(--n-footer-tagline-section-color, #000E);
+
+        .footnote-wrapper {
+            align-items: center;
+        }
+
+        img.site-logo {
+            filter: grayscale(1) invert(1);
+        }
+    }
+
+    .footer-copyright-section {
+        background: var(--n-footer-copyright-section-color, #000);
+    }
+
+    .copyright-notice {
+        font-size: 80%;
+        text-align: center;
+    }
+
+    .footer-widget-wrapper, .footnote-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: calc(var(--n-base-padding) * 2);
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    p a {
+        
+        text-decoration: underline;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+.nav-brand {
+    position: relative;
+    top: -0.8rem;
+}
+
+.nav-brand.show-logo {
+    line-height: 0;
+    top: 0;
+}
+
+.site-logo {
+    max-width: 150px;
+    display: inline-block;
+    margin: 0;
+}
+
+span.site-subtitle {
+    font-size: 0.9rem;
+    left: 0;
+    position: absolute;
+    bottom: -1rem;
+    border-top: 2px solid white;
+}
+
+span.site-name {
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding-top: 0;
+    position: relative;
+}
+
+nav.pagination-container ul.pagination.pag-disjoint {
+    width: fit-content;
+    margin: calc(5 * var(--n-base-margin)) auto;
+}
+
+.pagination li span.current {
+    color: currentColor;
+    padding: calc(2 * var(--n-base-padding)) calc(4 * var(--n-base-padding));
+    display: inline-block;
+}
+
+
+.pagination li:has(span.current) {
+    pointer-events: none;
+    color: var(--n-border-color);
+}
+
+pre {
+    width: 100%;
+    background: color-mix(in srgb, white 95%, var(--n-text-color));
+}
+
+.n-flex.edit-logout {
+    text-align: right;
+}
+
+.form-group {
+    max-width: 100%;
+    width: 100%;
+}
+
+.form-group #comment {
+    width: 100%;
+    height: 6rem;
+    font-size: 1.1rem;
+}
+
+form#commentform input {
+    font-size: 1.1rem;
+    font-family: "Ubuntu";
+}
+
+.to-top {
+    position: fixed;
+    right: 1rem;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    bottom: 1rem;
+    background: linear-gradient(90deg, var(--n-brand-secondary-color) 0%, var(--n-brand-primary-color) 0%);
+}
+
+.to-top.fix-left {
+    right: auto;
+    left: 1rem;
+}
+
+.to-top:hover {
+    color: white;
+}
+
+
+
+@media (min-width: 768px) {
+    .main-content-wrapper.has-sidebar {
+        border-right: 1px solid var(--n-border-color);
+    }
+}
